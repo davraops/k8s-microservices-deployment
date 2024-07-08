@@ -1,0 +1,15 @@
+{{- range .Values.microservices }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .name }}
+spec:
+  selector:
+    app: {{ .name }}
+  ports:
+    - protocol: TCP
+      port: {{ .port }}
+      targetPort: {{ .port }}
+  type: ClusterIP
+---
+{{- end }}

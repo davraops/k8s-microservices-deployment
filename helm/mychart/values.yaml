@@ -1,0 +1,9 @@
+microservices:
+  - name: microservice1
+    image: your-docker-registry/microservice1:latest
+    replicas: 3
+    port: 80
+  - name: microservice2
+    image: your-docker-registry/microservice2:latest
+    replicas: 3
+    port: 80
